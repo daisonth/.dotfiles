@@ -1,0 +1,58 @@
+draw_bold_text_with_bright_colors: true
+
+#Colors (Gruvbox dark)
+colors:
+  # Default colors
+  primary:
+    background: "#000000"
+    foreground: "#ebdbb2"
+
+  cursor:
+    cursor: "#d5001e"
+
+  # Normal colors
+  normal:
+    black: "#000000"
+    red: "#cc241d"
+    green: "#98971a"
+    yellow: "#d79921"
+    blue: "#458588"
+    magenta: "#b16286"
+    cyan: "#689d6a"
+    white: "#a89984"
+
+  # Bright colors
+  bright:
+    black: "#928374"
+    red: "#fb4934"
+    green: "#b8bb26"
+    yellow: "#fabd2f"
+    blue: "#83a598"
+    magenta: "#d3869b"
+    cyan: "#8ec07c"
+    white: "#ebdbb2"
+
+# font configuration
+font:
+  normal:
+    family: "blex mono nerd font"
+    style: regular
+  bold:
+    family: "blex mono nerd font"
+    style: regular
+    style: bold
+  italic:
+    family: "blex mono nerd font"
+    style: regular
+    style: italic
+  bold_italic:
+    family: "blex mono nerd font"
+    style: regular
+    style: bold italic
+  size: 16.0
+
+window:
+  opacity: 0.9
+  padding:
+    x: 2
+    y: 2

@@ -1,0 +1,151 @@
+set $mod Mod4
+
+# wallpaper
+output * bg ~/wallpaper/fav/light_cycle.jpg fill
+
+output HDMI1 pos 0 0 res 1920x1080
+output eDP-1 pos 0 0
+
+workspace 4 output eDP-1
+workspace 5 output eDP-1
+workspace 6 output eDP-1
+
+workspace 1 output HDMI-A-1
+workspace 2 output HDMI-A-1
+workspace 3 output HDMI-A-1
+
+# bar
+bar {
+  swaybar_command waybar
+}
+
+workspace_auto_back_and_forth no
+
+set $color1 #232a2d
+set $color2 #cc241d
+
+# borders color1
+client.focused $color2 $color2 $color2 $color2 $color2
+client.unfocused $color1 $color1 $color1
+client.focused_inactive $color1 $color1 $color1
+client.urgent $color1 $color1 $color1
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term alacritty
+
+bindsym $mod+Return exec $term
+bindsym $mod+m exec $term -e nvim
+bindsym $mod+n exec $term -e nnn -e
+bindsym $mod+g exec firefox
+bindsym $mod+Shift+g exec firefox --private-window
+bindsym $mod+grave kill
+bindsym $mod+Shift+c reload
+bindsym $mod+r exec wofi --show run
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# workspaces
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+q workspace number 4
+bindsym $mod+w workspace number 5
+bindsym $mod+e workspace number 6
+# bindsym $mod+7 workspace number 7
+# bindsym $mod+8 workspace number 8
+# bindsym $mod+9 workspace number 9
+# bindsym $mod+0 workspace number 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+q move container to workspace number 4
+bindsym $mod+Shift+w move container to workspace number 5
+bindsym $mod+Shift+e move container to workspace number 6
+# bindsym $mod+Shift+7 move container to workspace number 7
+# bindsym $mod+Shift+8 move container to workspace number 8
+# bindsym $mod+Shift+9 move container to workspace number 9
+# bindsym $mod+Shift+0 move container to workspace number 10
+
+workspace_auto_back_and_forth yes
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# bindsym $mod+w layout tabbed
+bindsym F11 fullscreen
+bindsym $mod+s floating toggle
+bindsym $mod+a focus parent
+
+mode "resize" {
+  bindsym $left resize shrink width 10px
+  bindsym $down resize grow height 10px
+  bindsym $up resize shrink height 10px
+  bindsym $right resize grow width 10px
+
+  bindsym Left resize shrink width 10px
+  bindsym Down resize grow height 10px
+  bindsym Up resize shrink height 10px
+  bindsym Right resize grow width 10px
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+shift+r mode "resize"
+bindsym $mod+p exec grim -g "$(slurp -d)" 
+
+# volume controle
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle 
+bindsym $mod+f3 exec amixer set Master 5%+
+bindsym $mod+f2 exec amixer set Master 5%-
+bindsym $mod+f4 exec amixer set Master toggle 
+
+# brightness controle
+bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+bindsym $mod+f6 exec brightnessctl s 5%+
+bindsym $mod+f5 exec brightnessctl s 5%-
+
+for_window [app_id="fzfrun"] floating enable 
+for_window [app_id="fzfrun"] resize set width 30 ppt height 40 ppt
+bindsym $mod+space exec alacritty --class fzfrun -e /home/daison/.dotfiles/scripts/fzfrun.sh
+
+for_window [app_id="fzfpow"] floating enable 
+for_window [app_id="fzfpow"] resize set width 10 ppt height 20 ppt
+bindsym $mod+Shift+p exec alacritty --class fzfpow -e /home/daison/.dotfiles/scripts/pow.sh
+
+default_border pixel 3
+gaps inner 0
+smart_gaps off
+
+xwayland enable
+
+exec pipewire &
+exec pipewire-pulse &
+exec /usr/lib/kdeconnectd &
+exec_always autotiling -w 1 2 3 4 5 6

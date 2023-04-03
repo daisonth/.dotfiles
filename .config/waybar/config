@@ -1,0 +1,89 @@
+{
+  "layer": "top",
+  "position": "left",
+  "width": 50,
+  "modules-left": ["river/tags"],
+  "modules-right": ["network", "backlight", "battery","pulseaudio", "cpu", "clock", "tray"],
+  "river/tags": {
+      "num-tags": 9
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": "🌐",
+    "format-ethernet": "🖥️",
+    "format-disconnected": "❌",
+    "rotate": 0,
+    "align": 0.5
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon}\n{capacity}",
+    "format-icons": ["🪫", "🔋"],
+    "rotate": 0,
+    "align": 0.5
+  },
+  "memory": {
+    "interval": 10,
+    "format": "{icon} {percentage}%",
+    "states": {
+      "ok": 80,
+      "heavy": 100
+    },
+    "format-icons": ["💽"],
+    "max-length": 10,
+    "rotate": 90
+  },
+  "cpu": {
+    "interval": 5,
+    "tooltip": false,
+    "states": {
+      "ok": 80,
+	    "heavy": 100
+    },
+    "format": "{icon}\n{usage}",
+    "format-icons": ["🧠"],
+    "rotate": 0,
+    "align": 0.5
+  },
+  "clock": {
+    "tooltip": false,
+    "format": "{:%I\n%M}",
+    "rotate": 0,
+    "align": 0.5
+  },
+  "tray": {
+    "tooltip": false,
+    // "icon-size": 16,
+    "spacing": 0
+  },
+  "backlight": {
+    "device": "amdgpu_b10",
+    "format": "{icon}\n{percent}",
+    "format-icons": ["🔆", "☀️"],
+    "rotate": 0,
+    "align": 0.5
+  },
+  "pulseaudio": {
+  	"format": "{icon}\n{volume}",
+  	"format-bluetooth": "{icon}{volume}",
+  	"format-muted": "",
+  	"format-icons": {
+  		"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+  		"headphones": "",
+  		"handsfree": "",
+  		"headset": "",
+  		"phone": "",
+  		"portable": "",
+  		"car": "",
+  		"default": ["🔈", "🔉", "🔊"]
+  	},
+  	"scroll-step": 1,
+  	"on-click": "pavucontrol",
+    "rotate": 0,
+    "align": 0.5
+  }
+}
