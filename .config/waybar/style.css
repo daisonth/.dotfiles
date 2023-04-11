@@ -21,7 +21,7 @@
 
 window#waybar {
 	padding: 0 0;
-	background-color: #000000;
+  background: rgba(00, 00, 00, 0.8);
 	color: #4C4C4C;
 }
 
@@ -33,7 +33,7 @@ window#waybar {
   font-size: 20px;
 }
 
-#tags button.current_output {
+#tags button.occupied {
 	color: #ffffff;
 }
 
@@ -59,10 +59,9 @@ window#waybar {
 }
 
 #clock {
-  color: green;
+  color: magenta;
   font-weight: bold;
   font-size: 28px;
-  /* background: magenta; */
 }
 
 #backlight{

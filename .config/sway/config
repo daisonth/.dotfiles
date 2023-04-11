@@ -133,11 +133,11 @@ bindsym $mod+f5 exec brightnessctl s 5%-
 
 for_window [app_id="fzfrun"] floating enable 
 for_window [app_id="fzfrun"] resize set width 30 ppt height 40 ppt
-bindsym $mod+space exec alacritty --class fzfrun -e /home/daison/.dotfiles/scripts/fzfrun.sh
+bindsym $mod+space exec alacritty --class fzfrun -e /home/daison/.config/sway/fzfrun.sh
 
 for_window [app_id="fzfpow"] floating enable 
 for_window [app_id="fzfpow"] resize set width 10 ppt height 20 ppt
-bindsym $mod+Shift+p exec alacritty --class fzfpow -e /home/daison/.dotfiles/scripts/pow.sh
+bindsym $mod+Shift+p exec alacritty --class fzfpow -e /home/daison/.config/sway/pow.sh
 
 default_border pixel 3
 gaps inner 0
