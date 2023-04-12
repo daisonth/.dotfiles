@@ -50,6 +50,7 @@ alias mp3='youtube-dl -x --audio-format mp3 '
 alias mp4='youtube-dl --restrict-filenames '
 alias img='swayimg'
 alias zathura='zathura $(fzf)'
+alias weather='curl wttr.in/680308'
 
 eval $(thefuck --alias)
 
@@ -104,6 +105,5 @@ export QT_STYLE_OVERIDE=GTK+
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
