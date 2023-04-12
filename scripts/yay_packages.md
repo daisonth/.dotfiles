@@ -10,3 +10,4 @@ wl-color-picker
 wlprop
 yay-git
 zoom
+fzf-tab-git

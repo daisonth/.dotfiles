@@ -104,5 +104,6 @@ export QT_STYLE_OVERIDE=GTK+
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
