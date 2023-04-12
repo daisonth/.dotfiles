@@ -19,7 +19,6 @@ setopt autocd extendedglob nomatch
 unsetopt beep
 bindkey -v
 
-alias s='~/.dotfiles/scripts/swayup.sh'
 alias fcd='cd $(ls -a | fzf)'
 alias vv='nvim $(fzf)'
 alias vim='nvim'

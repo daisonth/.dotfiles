@@ -38,7 +38,7 @@ VOLUME_TOGGLE='notify-send -a System \
 exec pipewire &
 exec pipewire-pulse &
 exec /usr/lib/kdeconnectd &
-exec river-tag-overlay &
+exec river-tag-overlay --background-colour 0x000000 --border-colour 0xe82929 --square-active-background-colour 0x000000 --square-active-border-colour 0x91f488 --square-active-occupied-colour 0x00550a --square-inactive-background-colour 0x000000 --square-inactive-border-colour 0x29ace8 --square-inactive-occupied-colour 0x006679  &
 exec wired &
 exec wbg $WALLPAPER &
 exec waybar -s "$HOME/.config/waybar/style.css" -c "$HOME/.config/waybar/config" &

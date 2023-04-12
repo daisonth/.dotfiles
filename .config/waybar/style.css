@@ -34,12 +34,13 @@ window#waybar {
 }
 
 #tags button.occupied {
-	color: #ffffff;
+	color: #ff0000;
+  background: rgba(55, 00, 00, 0.4);
 }
 
 #tags button.focused {
-	background-color: #ff0000;
-	color: #000000;
+  background: rgba(55, 00, 00, 0.4);
+	color: #ffffff;
 }
 
 #network,
@@ -51,7 +52,7 @@ window#waybar {
 #mode,
 #battery{
 	color: #b4b4b9;
-	font-size: 20px;
+	font-size: 15px;
 }
 
 #pulseaudio{
@@ -61,7 +62,7 @@ window#waybar {
 #clock {
   color: magenta;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 #backlight{
@@ -98,6 +99,10 @@ window#waybar {
 
 #battery.critical.charging {
 	color: #b4b4b9;
+}
+
+#network {
+  color: #099FDF;
 }
 
 label:focus {

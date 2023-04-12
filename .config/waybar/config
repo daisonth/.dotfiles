@@ -9,10 +9,10 @@
   },
   "network": {
     "tooltip": false,
-    "format-wifi": "🌐",
+    "format-wifi": "🌐 {essid}",
     "format-ethernet": "🖥️",
     "format-disconnected": "❌",
-    "rotate": 0,
+    "rotate": 90,
     "align": 0.5
   },
   "battery": {
@@ -21,9 +21,9 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "{icon}\n{capacity}",
+    "format": "{icon} BAT : {capacity}%",
     "format-icons": ["🪫", "🔋"],
-    "rotate": 0,
+    "rotate": 90,
     "align": 0.5
   },
   "memory": {
@@ -44,9 +44,9 @@
       "ok": 80,
 	    "heavy": 100
     },
-    "format": "{icon}\n{usage}",
+    "format": "CPU : {usage}",
     "format-icons": ["🧠"],
-    "rotate": 0,
+    "rotate": 90,
     "align": 0.5
   },
   "clock": {
@@ -62,13 +62,13 @@
   },
   "backlight": {
     "device": "amdgpu_b10",
-    "format": "{icon}\n{percent}",
+    "format": "{icon} BKL : {percent}%",
     "format-icons": ["🔆", "☀️"],
-    "rotate": 0,
+    "rotate": 90,
     "align": 0.5
   },
   "pulseaudio": {
-  	"format": "{icon}\n{volume}",
+  	"format": "{icon} VOL : {volume}%",
   	"format-bluetooth": "{icon}{volume}",
   	"format-muted": "",
   	"format-icons": {
@@ -83,7 +83,7 @@
   	},
   	"scroll-step": 1,
   	"on-click": "pavucontrol",
-    "rotate": 0,
+    "rotate": 90,
     "align": 0.5
   }
 }
