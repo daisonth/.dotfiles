@@ -50,10 +50,12 @@
     "align": 0.5
   },
   "clock": {
-    "tooltip": false,
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "{:%Y-%m-%d}",
     "format": "{:%I\n%M}",
     "rotate": 0,
-    "align": 0.5
+    "align": 0.5,
   },
   "tray": {
     "tooltip": false,
@@ -65,7 +67,9 @@
     "format": "{icon} BKL : {percent}%",
     "format-icons": ["🔆", "☀️"],
     "rotate": 90,
-    "align": 0.5
+    "align": 0.5,
+    "on-scroll-up": "brightnessctl s 5%+",
+    "on-scroll-down": "brightnessctl s 5%-"
   },
   "pulseaudio": {
   	"format": "{icon} VOL : {volume}%",
@@ -81,7 +85,7 @@
   		"car": "",
   		"default": ["🔈", "🔉", "🔊"]
   	},
-  	"scroll-step": 1,
+  	"scroll-step": 5,
   	"on-click": "pavucontrol",
     "rotate": 90,
     "align": 0.5
