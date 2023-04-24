@@ -43,7 +43,7 @@ alias cat='bat'
 alias tree='exa --tree'
 alias add='sudo pacman -S'
 alias remove='sudo pacman --remove --recursive'
-alias update='sudo pacman -Syyu'
+alias update='sudo pacman -Syu'
 alias hc='herbstclient'
 alias mp3='youtube-dl -x --audio-format mp3 '
 alias mp4='youtube-dl --restrict-filenames '
@@ -106,3 +106,4 @@ export QT_STYLE_OVERIDE=GTK+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
+export PATH="/home/daison/bin:$PATH"

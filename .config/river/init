@@ -10,7 +10,7 @@
 # variables
 # ------------------------------------------- 
 
-WALLPAPER="$HOME/wallpaper/downloads/uplspash_sky_1.jpg"
+WALLPAPER="$HOME/wallpaper/downloads/sky_1.jpg"
 BROWSER="firefox"
 TERMINAL="alacritty"
 BACKGROUND_COLOR="0x000000"
