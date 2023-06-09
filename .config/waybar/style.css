@@ -21,7 +21,7 @@
 
 window#waybar {
 	padding: 0 0;
-  background: rgba(00, 00, 00, 0.8);
+  background: rgba(00, 00, 00, 1.0);
 	color: #4C4C4C;
 }
 
@@ -35,7 +35,7 @@ window#waybar {
 
 #tags button.occupied {
 	color: #ff0000;
-  background: rgba(55, 00, 00, 0.4);
+  /* background: rgba(55, 00, 00, 0.4); */
 }
 
 #tags button.focused {

@@ -54,3 +54,5 @@ vim.keymap.set("n", "bx", ":bd<CR>")
 vim.keymap.set("n", "<F1>", ":lua require('FTerm').toggle()<CR>")
 vim.keymap.set("i", "<F1>", "<Esc>:lua require('FTerm').toggle()<CR>")
 vim.keymap.set("t", "<F1>", "<C-\\><C-n>:lua require('FTerm').toggle()<CR>")
+
+vim.keymap.set("n", 'gx', [[:execute '!firefox ' . shellescape(expand('<cfile>'), 1)<CR>]])

@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'luisiacc/gruvbox-baby'
+  use 'sainnhe/gruvbox-material'
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
@@ -55,6 +56,20 @@ return require('packer').startup(function(use)
   }
   use("akinsho/bufferline.nvim")
   use("vimwiki/vimwiki")
-	use("numToStr/FTerm.nvim")
+  use("numToStr/FTerm.nvim")
   use("norcalli/nvim-colorizer.lua")
+  use({
+    "glepnir/lspsaga.nvim",
+    opt = true,
+    branch = "main",
+    event = "LspAttach",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+      --Please make sure you install markdown and markdown_inline parser
+      { "nvim-treesitter/nvim-treesitter" }
+    }
+  })
 end)

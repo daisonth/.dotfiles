@@ -56,12 +56,11 @@ eval $(thefuck --alias)
 # nnn setup
 BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
-#alias n='NNN_FIFO=/home/daison/.config/nnn/nnn.fifo nnn -e'
+# alias n='NNN_FIFO=/home/daison/.config/nnn/nnn.fifo nnn -e'
 export NNN_PLUG='v:imgview;p:preview-tui;k:kdeconnect;f:fixname;g:fzcd'
 if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
     source /usr/share/nnn/quitcd/quitcd.bash_zsh
 fi
-alias n='nnn -e'
 
 # Basic auto/tab complete:
 autoload -U compinit
