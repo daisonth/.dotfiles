@@ -1,2 +1,2 @@
 # .dotfiles
-linux wayland environment configuration files
+My Linux wayland environment configuration files
