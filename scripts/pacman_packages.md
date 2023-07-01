@@ -92,3 +92,4 @@ zip
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
+zellij

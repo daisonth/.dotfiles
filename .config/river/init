@@ -89,8 +89,9 @@ riverctl map normal Super B spawn "killall -SIGUSR1 waybar"
 riverctl map normal Super Space spawn "alacritty --class fzfrun -e ~/.dotfiles/scripts/fzfrun.sh"
 
 # take partial and full screenshots
-riverctl map normal Super P spawn "slurp | grim -g - ~/screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')"
-riverctl map normal None Print spawn "grim ~/screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')"
+# riverctl map normal Super P spawn "slurp | grim -g - ~/screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')"
+riverctl map normal Super P spawn "slurp | grim -g - ~/screenshots/$(date +'ss_%s.png')"
+riverctl map normal None Print spawn "grim ~/screenshots/$(date +'ss_%s.png')"
 
 riverctl map normal Super Q close
 riverctl map normal Super+Shift Q exit
