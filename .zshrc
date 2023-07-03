@@ -11,6 +11,8 @@ autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 export EDITOR="nvim"
+# export XDG_CURRENT_DESKTOP="sway"
+export XDG_CURRENT_DESKTOP="river"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
