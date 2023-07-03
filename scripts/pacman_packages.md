@@ -93,3 +93,5 @@ zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 zellij
+xdg-desktop-portal
+xdg-desktop-portal-wlr
