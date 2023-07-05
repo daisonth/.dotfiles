@@ -1,10 +1,12 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "Misc fixed", "Unifont";
+	font-family: "blex mono nerd font";
 	min-height: 0px;
 	padding: 5px 0;
-	margin:  5px 0;
+	margin:  0px 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .vertical {
@@ -12,20 +14,27 @@
   margin-bottom: -5;
 }
 
+window#waybar {
+	padding: 0 0;
+  background: rgba(00, 00, 00, 0.7);
+	color: #000000;
+}
+
 #window {
-  font-size: 20px;
   margin-left: 10px;
   margin-top: 0px;
   color: #323232;
 }
 
-window#waybar {
-	padding: 0 0;
-  background: rgba(00, 00, 00, 1.0);
-	color: #4C4C4C;
+#workspaces button {
+	margin-top: 0px;
+	margin-left: 0px;
+	font-size: 4px;
+	margin-bottom: 0px;
+	border-radius: 0px;
 }
 
-#tags button {
+#workspaces button {
 	padding: 0 0px;
 	margin: 0 0px;
 	color: #444444;
@@ -33,14 +42,8 @@ window#waybar {
   font-size: 20px;
 }
 
-#tags button.occupied {
+#workspaces button.active {
 	color: #ff0000;
-  /* background: rgba(55, 00, 00, 0.4); */
-}
-
-#tags button.focused {
-  background: rgba(55, 00, 00, 0.4);
-	color: #ffffff;
 }
 
 #network,
@@ -52,29 +55,17 @@ window#waybar {
 #mode,
 #battery{
 	color: #b4b4b9;
-	font-size: 15px;
-}
-
-#pulseaudio{
-	color: lightblue;
-}
-
-#clock {
-  color: magenta;
+	font-size: 19px;
   font-weight: bold;
-  font-size: 20px;
+	margin:  10px 0;
+}
+
+#network {
+  color: #7daea3;
 }
 
 #backlight{
-	color: gold;
-}
-
-#cpu {
-	color: #C58C58;
-}
-
-#memory {
-	color: #b4b4b9;
+	color: #d8a657;
 }
 
 #battery.charging {
@@ -82,7 +73,7 @@ window#waybar {
 }
 
 #battery.discharging {
-	color: lightgreen;
+	color: #a9b665;
 }
 
 #battery.warning.discharging {
@@ -101,8 +92,17 @@ window#waybar {
 	color: #b4b4b9;
 }
 
-#network {
-  color: #099FDF;
+#pulseaudio{
+	color: #7daea3;
+}
+
+#cpu {
+	color: #ea6962;
+}
+
+#clock {
+  color: magenta;
+  font-weight: bold;
 }
 
 label:focus {

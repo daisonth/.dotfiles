@@ -35,8 +35,9 @@ VOLUME_TOGGLE='notify-send -a System \
 # start Daemons
 # -------------------------------------------
 
-exec pipewire &
-exec pipewire-pulse &
+exec /usr/bin/pipewire &
+exec /usr/bin/pipewire-pulse &
+exec /usr/bin/pipewire-media-session &
 exec /usr/lib/kdeconnectd &
 exec river-tag-overlay --background-colour 0x000000 \
   --border-colour 0xe82929 \
@@ -47,9 +48,10 @@ exec river-tag-overlay --background-colour 0x000000 \
   --square-inactive-border-colour 0x29ace8 \
   --square-inactive-occupied-colour 0x006679  &
 exec wired &
+exec wireplumber &
 # exec wbg $WALLPAPER &
 exec waybar -s "$HOME/.config/waybar/style.css" -c "$HOME/.config/waybar/config" &
-exec ./startup.sh &
+# exec ./startup.sh &
 swaybg -o eDP-1 -i "$WALLPAPER" -o HDMI-A-1 -i "$WALLPAPER" &
 
 # -------------------------------------------

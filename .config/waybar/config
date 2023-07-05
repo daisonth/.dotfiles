@@ -2,92 +2,90 @@
   "layer": "top",
   "position": "left",
   "width": 50,
-  "modules-left": ["river/tags"],
+  "modules-left": ["wlr/workspaces"],
   "modules-right": ["network", "backlight", "battery","pulseaudio", "cpu", "clock", "tray"],
-  "river/tags": {
-      "num-tags": 9
+
+  "wrl/workspaces": {
+    "sort-by-name": true
   },
+
+  "hyprland/window": {
+    "max-length": 200,
+    "separate-outputs": true
+  },
+
   "network": {
     "tooltip": false,
-    "format-wifi": "🌐 {essid}",
-    "format-ethernet": "🖥️",
+		"format-wifi": "  {essid}",
+    "format-ethernet": "{essid}",
     "format-disconnected": "❌",
     "rotate": 90,
     "align": 0.5
   },
-  "battery": {
-    "interval": 60,
-    "states": {
-      "warning": 20,
-      "critical": 10
-    },
-    "format": "{icon} BAT : {capacity}%",
-    "format-icons": ["🪫", "🔋"],
-    "rotate": 90,
-    "align": 0.5
-  },
-  "memory": {
-    "interval": 10,
-    "format": "{icon} {percentage}%",
-    "states": {
-      "ok": 80,
-      "heavy": 100
-    },
-    "format-icons": ["💽"],
-    "max-length": 10,
-    "rotate": 90
-  },
-  "cpu": {
-    "interval": 5,
-    "tooltip": false,
-    "states": {
-      "ok": 80,
-	    "heavy": 100
-    },
-    "format": "CPU : {usage}",
-    "format-icons": ["🧠"],
-    "rotate": 90,
-    "align": 0.5
-  },
-  "clock": {
-    "interval": 60,
-    "tooltip": true,
-    "tooltip-format": "{:%Y-%m-%d}",
-    "format": "{:%I\n%M}",
-    "rotate": 0,
-    "align": 0.5,
-  },
-  "tray": {
-    "tooltip": false,
-    // "icon-size": 16,
-    "spacing": 0
-  },
+
   "backlight": {
+		"tooltip": false,
     "device": "amdgpu_b10",
-    "format": "{icon} BKL : {percent}%",
-    "format-icons": ["🔆", "☀️"],
+		"format": " {}",
     "rotate": 90,
     "align": 0.5,
     "on-scroll-up": "brightnessctl s 5%+",
     "on-scroll-down": "brightnessctl s 5%-"
   },
-  "pulseaudio": {
-  	"format": "{icon} VOL : {volume}%",
-  	"format-bluetooth": "{icon}{volume}",
-  	"format-muted": "",
-  	"format-icons": {
-  		"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
-  		"headphones": "",
-  		"handsfree": "",
-  		"headset": "",
-  		"phone": "",
-  		"portable": "",
-  		"car": "",
-  		"default": ["🔈", "🔉", "🔊"]
-  	},
-  	"scroll-step": 5,
-  	"on-click": "pavucontrol",
+
+  "battery": {
+    "interval": 60,
+    "format": "{icon}  {capacity}",
+    "format-charging": " {capacity}",
+    "format-plugged": " {capacity}",
+    "format-alt": "{time}  {icon}",
+    "format-icons": ["", "", "", "", ""],
     "rotate": 90,
-    "align": 0.5
-  }
+    "align": 0.5,
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+    },
+  },
+
+  "pulseaudio": {
+  	"format": "{icon} {volume}",
+  	"format-muted": " X",
+		"on-click":"pamixer --toggle-mute",
+  	"scroll-step": 5,
+    "rotate": 90,
+    "align": 0.5,
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+  },
+
+  "cpu": {
+    "interval": 5,
+    "tooltip": false,
+    "format": " {usage}",
+    "rotate": 90,
+    "align": 0.5,
+    "states": {
+      "ok": 80,
+	    "heavy": 100
+    },
+  },
+
+  "clock": {
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "{:%Y-%m-%d}",
+    "on-click": "notify-send \"$(date +\"%a, %b %d  |  %I:%M\" )\" -t 4000 ",
+    "format": "{:%I\n%M}",
+    "rotate": 0,
+    "align": 0.5,
+  },
+
+  "tray": {
+    "tooltip": false,
+    "spacing": 0
+  },
+
 }
