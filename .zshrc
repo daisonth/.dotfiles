@@ -12,7 +12,7 @@ autoload -Uz +X bashcompinit && bashcompinit
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 export EDITOR="nvim"
 # export XDG_CURRENT_DESKTOP="sway"
-export XDG_CURRENT_DESKTOP="river"
+export XDG_CURRENT_DESKTOP="hyprland"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -38,6 +38,7 @@ alias snd='kdeconnect-cli -n RMX2001 --share $(fzf -m)'
 alias con='kdeconnect-cli -l'
 alias sda1='sudo mount /dev/sda1 /media/'
 alias x='exit'
+alias n='nnn'
 alias ls='exa'
 alias ll='exa -l'
 alias lla='exa -la'

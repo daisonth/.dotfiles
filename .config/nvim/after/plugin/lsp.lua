@@ -7,6 +7,7 @@ lsp.ensure_installed({
   'eslint',
   'lua_ls',
   'rust_analyzer',
+  'emmet_ls'
 })
 
 -- Fix Undefined global 'vim'
@@ -19,7 +20,6 @@ lsp.configure('lua_ls', {
     }
   }
 })
-
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
