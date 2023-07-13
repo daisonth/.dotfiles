@@ -21,7 +21,32 @@ lsp.configure('lua_ls', {
   }
 })
 
+lsp.configure('emmet_ls', {
+  filetypes = { 'html', 'php', 'typescript' }
+})
+
+require("bootstrap-cmp.config"):setup({
+  file_types = { 'html', 'php' },
+})
+
 local cmp = require('cmp')
+-- local cmp_action = require('lsp-zero').cmp_action()
+require('luasnip.loaders.from_vscode').lazy_load()
+
+cmp.setup({
+  sources = {
+    { name = 'path' },
+    { name = 'nvim_lsp' },
+    { name = 'bootstrap' },
+    { name = 'buffer',   keyword_length = 3 },
+    { name = 'luasnip',  keyword_length = 2 },
+  },
+  --   mapping = {
+  --     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+  --     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+  --   }
+})
+
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<M-p>'] = cmp.mapping.select_prev_item(cmp_select),

@@ -31,8 +31,13 @@ return require('packer').startup(function(use)
       -- Snippets
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
+      -- {
+      --   "L3MON4D3/LuaSnip",
+      --   dependencies = { "rafamadriz/friendly-snippets" },
+      -- }
     }
   }
+  use 'Jezda1337/cmp_bootstrap'
   use 'kyazdani42/nvim-tree.lua'
   use("lukas-reineke/indent-blankline.nvim")
   use("kyazdani42/nvim-web-devicons")
