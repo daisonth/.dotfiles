@@ -2,8 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'luisiacc/gruvbox-baby'
@@ -49,9 +48,7 @@ return require('packer').startup(function(use)
   })
   use({
     "numToStr/Comment.nvim",
-    config = function()
-      require("Comment").setup()
-    end,
+    lazy = false
   })
   use {
     'goolord/alpha-nvim',
@@ -77,4 +74,29 @@ return require('packer').startup(function(use)
       { "nvim-treesitter/nvim-treesitter" }
     }
   })
+  use {
+    'laytan/tailwind-sorter.nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
+    config = function() require('tailwind-sorter').setup() end,
+    run = 'cd formatter && npm i && npm run build',
+  }
+  use {
+    'razak17/tailwind-fold.nvim',
+    opts = {},
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact' },
+  }
+  -- use {
+  --   "malbertzard/inline-fold.nvim",
+  --   opts = { defaultPlaceholder = "...",
+  --   queries = {
+  --     -- Some examples you can use
+  --     html = {
+  --       { pattern = 'class="([^"]*)"'}, -- classes in html
+  --       { pattern = 'href="(.-)"' }, -- hrefs in html
+  --       { pattern = 'src="(.-)"' }, -- HTML img src attribute
+  --     }
+  --   },
+  -- }
+  -- }
 end)

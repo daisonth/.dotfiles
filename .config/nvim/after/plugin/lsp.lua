@@ -7,7 +7,7 @@ lsp.ensure_installed({
   'eslint',
   'lua_ls',
   'rust_analyzer',
-  'emmet_ls'
+  'emmet_ls',
 })
 
 -- Fix Undefined global 'vim'
@@ -37,9 +37,9 @@ cmp.setup({
   sources = {
     { name = 'path' },
     { name = 'nvim_lsp' },
-    { name = 'bootstrap' },
-    { name = 'buffer',   keyword_length = 3 },
-    { name = 'luasnip',  keyword_length = 2 },
+    -- { name = 'bootstrap' },
+    { name = 'buffer',  keyword_length = 3 },
+    { name = 'luasnip', keyword_length = 2 },
   },
   --   mapping = {
   --     ['<C-f>'] = cmp_action.luasnip_jump_forward(),

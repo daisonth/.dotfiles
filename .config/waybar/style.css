@@ -16,7 +16,7 @@
 
 window#waybar {
 	padding: 0 0;
-  background: rgba(00, 00, 00, 0.7);
+  background: rgba(00, 00, 00, 1.0);
 	color: #000000;
 }
 

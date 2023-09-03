@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 vim.keymap.set("n", ";", ":")
 
 vim.keymap.set("i", "jk", "<Esc>")
@@ -34,8 +33,9 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-c>", ":wqa")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR><cmd>w<CR>")
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>f", "<cmd>w<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>lua vim.lsp.buf.format()<CR><cmd>w<CR>")
 
 -- for quickfix menu
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")

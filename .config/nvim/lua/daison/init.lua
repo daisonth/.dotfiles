@@ -1,3 +1,4 @@
-require("daison.packer")
-require("daison.remap")
+-- require("daison.packer")
+require("daison.plugins")
+require("daison.keymaps")
 require("daison.set")
