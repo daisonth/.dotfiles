@@ -21,7 +21,7 @@ local plugins = {
   },
   'sainnhe/gruvbox-material',
   'nvim-treesitter/nvim-treesitter',
-  'ThePrimeagen/harpoon',
+  -- 'ThePrimeagen/harpoon',
   'mbbill/undotree',
   'tpope/vim-fugitive',
   {
@@ -47,8 +47,7 @@ local plugins = {
   },
   'Jezda1337/cmp_bootstrap',
   'kyazdani42/nvim-tree.lua',
-  'lukas-reineke/indent-blankline.nvim',
-  -- 'kyazdani42/nvim-web-devicons',
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup({}) end,
@@ -63,7 +62,10 @@ local plugins = {
     config = function() require 'alpha'.setup(require 'alpha.themes.dashboard'.config) end
   },
   'akinsho/bufferline.nvim',
-  'vimwiki/vimwiki',
+  {
+    'vimwiki/vimwiki',
+    cmd = "VimwikiIndex"
+  },
   'numToStr/FTerm.nvim',
   'norcalli/nvim-colorizer.lua',
   {
@@ -88,6 +90,9 @@ local plugins = {
     opts = {},
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     ft = { 'html', 'php', 'svelte', 'astro', 'vue', 'typescriptreact' },
+  },
+  {
+    'simrat39/rust-tools.nvim'
   }
 }
 

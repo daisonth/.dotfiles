@@ -99,10 +99,10 @@ font:
     family: "blex mono nerd font"
     style: regular
     style: bold italic
-  size: 14.0
+  size: 15.0
 
 window:
-  opacity: 0.7
+  opacity: 0.5
   padding:
     x: 2
     y: 2

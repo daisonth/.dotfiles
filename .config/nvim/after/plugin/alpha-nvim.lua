@@ -13,7 +13,7 @@ dashboard.section.buttons.val = {
   dashboard.button("F", "🔎 Find file", "<cmd>Telescope find_files<CR>"),
   dashboard.button("R", "🗃 Recently opened files", "<cmd>Telescope oldfiles<CR>"),
   dashboard.button("V", "📓 Vimwiki", "<cmd>VimwikiIndex<CR>"),
-  dashboard.button("P", "📦 Packersync", "<cmd>PackerSync<CR>"),
+  dashboard.button("P", "📦 Lazy", "<cmd>Lazy<CR>"),
   dashboard.button("q", "🔴 Quit NVIM", ":qa<CR>"),
 }
 dashboard.config.opts.noautocmd = true

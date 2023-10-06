@@ -2,8 +2,8 @@
   "layer": "top",
   "position": "left",
   "width": 50,
-  "modules-left": ["wlr/workspaces"],
-  "modules-right": ["network", "backlight", "battery","pulseaudio", "cpu", "clock", "tray"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["network", "backlight", "battery", "pulseaudio", "memory", "cpu", "clock", "tray"],
 
   "wrl/workspaces": {
     "sort-by-name": true
@@ -59,6 +59,13 @@
 		"format-icons": {
 			"default": ["", "", ""]
 		}
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {used}",
+    "rotate": 90,
+    "align": 0.5,
   },
 
   "cpu": {

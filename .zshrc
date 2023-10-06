@@ -27,6 +27,9 @@ alias vim='nvim'
 alias v='nvim'
 alias hx='helix'
 alias cp="rsync -avz"
+alias size="du -h --max-depth=1"
+alias hotspot="nmcli device wifi connect AndroidAP"
+alias wifi="nmcli device wifi connect"
 
 alias gs='git status'
 alias ga='git add'
@@ -39,11 +42,11 @@ alias con='kdeconnect-cli -l'
 alias sda1='sudo mount /dev/sda1 /media/'
 alias x='exit'
 alias n='nnn'
-alias ls='exa'
-alias ll='exa -l'
-alias lla='exa -la'
+alias ls='eza'
+alias ll='eza -l'
+alias lla='eza -la'
 alias cat='bat'
-alias tree='exa --tree'
+alias tree='eza --tree'
 alias add='sudo pacman -S'
 alias remove='sudo pacman --remove --recursive'
 alias update='sudo pacman -Syu'
