@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "left",
-  "width": 50,
+  "width": 40,
   "modules-left": ["hyprland/workspaces"],
   "modules-right": ["network", "backlight", "battery", "pulseaudio", "memory", "cpu", "clock", "tray"],
 

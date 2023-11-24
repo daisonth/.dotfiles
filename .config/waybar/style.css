@@ -58,14 +58,14 @@ window#waybar {
 #tray,
 #mode {
 	color: #55ae65; /* #b4b4b9 */
-	font-size: 19px;
+	font-size: 20px;
   font-weight: bold;
 	margin:  10px 0;
 }
 
 #battery {
   color: #15ff00;
-	font-size: 19px;
+	font-size: 20px;
   font-weight: bold;
 	margin:  10px 0;
 }

@@ -28,8 +28,7 @@ alias v='nvim'
 alias hx='helix'
 alias cp="rsync -avz"
 alias size="du -h --max-depth=1"
-alias hotspot="nmcli device wifi connect AndroidAP"
-alias wifi="nmcli device wifi connect"
+alias wifi="nmcli device wifi"
 
 alias gs='git status'
 alias ga='git add'

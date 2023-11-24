@@ -35,4 +35,4 @@ vim.opt.laststatus = 0
 vim.opt.ignorecase = true
 vim.opt.cmdheight = 1
 
-vim.g.vimwiki_list = { { path = "~/.vimwiki/", syntax = "markdown", ext = ".md" } }
+vim.g.vimwiki_list = { { path = "~/.vimwiki/", syntax = "markdown", ext = "md" } }

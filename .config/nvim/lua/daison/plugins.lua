@@ -16,7 +16,7 @@ vim.g.mapleader = " "
 local plugins = {
   {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.0',
+    tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   'sainnhe/gruvbox-material',
@@ -64,6 +64,7 @@ local plugins = {
   'akinsho/bufferline.nvim',
   {
     'vimwiki/vimwiki',
+    lazy = false,
     cmd = "VimwikiIndex"
   },
   'numToStr/FTerm.nvim',
