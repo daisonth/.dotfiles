@@ -1,0 +1,37 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14
+
+[font.bold]
+family = "blex mono nerd font"
+style = "bold"
+
+[font.bold_italic]
+family = "blex mono nerd font"
+style = "bold italic"
+
+[font.italic]
+family = "blex mono nerd font"
+style = "italic"
+
+[font.normal]
+family = "blex mono nerd font"
+style = "regular"
+
+[window]
+opacity = 1.0
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 2
+y = 2
+
+[general]
+# import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
+# import = [ "~/.config/alacritty/gruvbox.toml" ]
+import = [ "~/.config/alacritty/moonfly.toml" ]

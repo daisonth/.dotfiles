@@ -9,10 +9,11 @@ xrdb -merge -I $HOME ~/.Xresources > /dev/null
 autoload -U colors && colors
 autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n %{$fg[magenta]%}%~%{$fg[red]%}]>%b "
 export EDITOR="nvim"
 # export XDG_CURRENT_DESKTOP="sway"
-export XDG_CURRENT_DESKTOP="hyprland"
+# export XDG_CURRENT_DESKTOP="hyprland"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -25,10 +26,14 @@ alias fcd='cd $(ls -a | fzf)'
 alias vv='nvim $(fzf)'
 alias vim='nvim'
 alias v='nvim'
+alias y='yazi'
 alias hx='helix'
 alias cp="rsync -avz"
 alias size="du -h --max-depth=1"
 alias wifi="nmcli device wifi"
+alias bt="bluetoothctl"
+
+alias artisan="php artisan"
 
 alias gs='git status'
 alias ga='git add'
@@ -55,6 +60,11 @@ alias mp4='yt-dlp '
 alias img='swayimg'
 alias zathura='zathura $(fzf)'
 alias weather='curl wttr.in/680308'
+
+alias tx='tmuxifier'
+alias txks='tmux kill-session'
+alias txls='tmux ls'
+alias txa='tmux attach'
 
 # nnn setup
 BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
@@ -109,3 +119,21 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
 export PATH="/home/daison/bin:$PATH"
+
+# bun completions
+[ -s "/home/daison/.bun/_bun" ] && source "/home/daison/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Tmuxifier setup
+export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
+eval "$(zoxide init zsh)"
+
+eval $(thefuck --alias)
+
+# Shopify Hydrogen alias to local projects
+alias h2='$(npm prefix -s)/node_modules/.bin/shopify hydrogen'

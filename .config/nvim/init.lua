@@ -1,8 +1,3 @@
---                _
---    ____ _   __(_)___ ___
---   / __ \ | / / / __ `__ \
---  / / / / |/ / / / / / / /
--- /_/ /_/|___/_/_/ /_/ /_/
---
-
-require("daison")
+require("user.lazy")
+require("user.keymaps")
+require("user.options")

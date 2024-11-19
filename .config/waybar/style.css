@@ -1,53 +1,40 @@
 * {
-	border: none;
-	border-radius: 0;
-	font-family: "blex mono nerd font";
-	min-height: 0px;
-	padding: 5px 0;
-	margin:  0px 0;
-  font-size: 20px;
+  border: none;
+  border-radius: 0;
+  font-family: "blex mono nerd font";
+  min-height: 0px;
+  padding: 0px 0px;
+  margin: 0px 0;
+  font-size: 15px;
   font-weight: bold;
 }
 
-.vertical {
-  margin-top: -5;
-  margin-bottom: -5;
-}
-
 window#waybar {
-	padding: 0 0;
-  background: rgba(00, 00, 00, 1.0);
-	color: #000000;
+  padding: 0 0;
+  background: #000;
+  /* background: rgba(255, 76, 48, 0.0); */
+  color: #000000;
 }
 
 #window {
-  margin-left: 10px;
-  margin-top: 0px;
   color: #323232;
 }
 
 #workspaces button {
-	margin-top: 0px;
-	margin-left: 0px;
-	font-size: 4px;
-	margin-bottom: 0px;
-	border-radius: 0px;
-}
-
-#workspaces button {
-	padding: 0 0px;
-	margin: 0 0px;
-	color:  #55ae65; /* #444444 */
+  color: #ae81ff;
+  padding: 0px 10px;
   font-weight: bold;
-  font-size: 20px;
 }
 
 #workspaces button.active {
-  color: #15ff00; /* #ff0000 */
+  color: black;
+  background: #ae81ff;
 }
 
 #workspaces button:hover {
+  padding-top: 0;
   background: rgba(255, 76, 48, 0.0);
+  color: #ae81ff;
 }
 
 #network,
@@ -56,45 +43,35 @@ window#waybar {
 #backlight,
 #pulseaudio,
 #tray,
+#battery.discharging,
+#mpd,
 #mode {
-	color: #55ae65; /* #b4b4b9 */
-	font-size: 20px;
-  font-weight: bold;
-	margin:  10px 0;
+  color: #ae81ff;
+  border-left: 0.3px solid #cf87e8;
+  font-weight: lighter;
+  padding: 0px 20px;
+  font-weight: lighter;
 }
 
 #battery {
   color: #15ff00;
-	font-size: 20px;
+  border-left: 0.3px solid #cf87e8;
   font-weight: bold;
-	margin:  10px 0;
-}
-
-#clock {
-	color: #15ff00; /* magenta */
-  font-weight: bold;
+  padding: 0px 20px;
 }
 
 #pulseaudio.muted {
   color: #15ff00;
 }
 
-/* #network { color: #7daea3; } */
-/**/
-/* #backlight{ color: #d8a657; } */
-/**/
-/* #battery.charging { color: #15ff00; } */
-/**/
-#battery.discharging { color: #55ae65; /* a9b665 */ }
-/**/
-/* #battery.warning.discharging { color: #b4b4b9; } */
-/**/
-/* #battery.critical.discharging { color: #b4b4b9; } */
-/**/
-/* #battery.warning.charging { color: #15ff00; } */
-/**/
-/* #battery.critical.charging { color: #15ff00; } */
-/**/
-/* #pulseaudio{ color: #7daea3; } */
-/**/
-/* #cpu { color: #ea6962; } */
+#clock {
+  color: #ae81ff;
+  /* border-left: 0.3px solid #cf87e8; */
+  /* padding-left: 20px; */
+  opacity: 1;
+  font-weight: bolder;
+}
+
+/* old colors  */
+/* green: #15ff00 */
+/* red : #ae81ff */
