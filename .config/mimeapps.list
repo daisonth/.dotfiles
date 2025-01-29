@@ -6,7 +6,7 @@ image/png=sxiv.desktop
 image/jpg=sxiv.desktop
 image/jpeg=sxiv.desktop
 image/webp=sxiv.desktop
-image/gif=zen-browser.desktop
+image/gif=firefox.desktop
 text/cpp=nvim.desktop
 audio/mp3=mocp.desktop
 audio/mpeg=mocp.desktop
@@ -26,6 +26,7 @@ x-scheme-handler/postman=Postman.desktop
 x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 hoppscotch=hoppscotch-handler.desktop
+x-scheme-handler/obsidian=obsidian.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-JO6FP1.desktop;userapp-Telegram Desktop-MDOFU1.desktop;

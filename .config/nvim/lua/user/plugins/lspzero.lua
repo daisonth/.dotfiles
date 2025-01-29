@@ -104,6 +104,7 @@ return {
     cmp.setup({
       sources = {
         { name = 'path' },
+        { name = "copilot" },
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
         { name = 'luasnip', keyword_length = 1 },

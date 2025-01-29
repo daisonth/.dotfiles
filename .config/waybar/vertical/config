@@ -1,44 +1,17 @@
 {
   "layer": "top",
-  "position": "top",
-  "modules-left": ["clock", "network", "mpd", "mpris"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": [ "backlight", "battery", "pulseaudio", "memory", "cpu", "tray"],
+  "position": "left",
+  "width": 40,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["network", "backlight", "battery", "pulseaudio", "memory", "cpu", "clock", "tray"],
 
   "wrl/workspaces": {
     "sort-by-name": true
   },
 
   "hyprland/window": {
-    "max-length": 50,
+    "max-length": 200,
     "separate-outputs": true
-  },
-
-  "mpris": {
-	"format": "{status_icon} {player}",
-	"format-paused": "{status_icon} {player}",
-	"status-icons": {
-        "playing": "",
-        "paused": ""
-	},
-    "on-click": "playerctl play-pause",
-  },
-
-  "mpd": {
-    "format": "{stateIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S})  {volume}",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "interval": 10,
-    "title-len": 10,
-    "state-icons": {
-        "playing": "",
-        "paused": ""
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)",
-    "on-click": "mpc toggle",
-    "on-scroll-up": "mpc volume +5",
-    "on-scroll-down": "mpc volume -5",
   },
 
   "network": {
@@ -46,7 +19,7 @@
 		"format-wifi": "  {essid}",
     "format-ethernet": "{essid}",
     "format-disconnected": "❌",
-    "max-length": 15,
+    "rotate": 90,
     "align": 0.5
   },
 
@@ -54,6 +27,7 @@
 		"tooltip": false,
     "device": "amdgpu_b10",
 		"format": " {}",
+    "rotate": 90,
     "align": 0.5,
     "on-scroll-up": "brightnessctl s 5%+",
     "on-scroll-down": "brightnessctl s 5%-"
@@ -66,6 +40,7 @@
     "format-plugged": " {capacity}",
     "format-alt": "{time}  {icon}",
     "format-icons": ["", "", "", "", ""],
+    "rotate": 90,
     "align": 0.5,
     "states": {
         "good": 95,
@@ -79,6 +54,7 @@
   	"format-muted": " X",
 		"on-click":"pamixer --toggle-mute",
   	"scroll-step": 5,
+    "rotate": 90,
     "align": 0.5,
 		"format-icons": {
 			"default": ["", "", ""]
@@ -88,6 +64,7 @@
   "memory": {
     "interval": 5,
     "format": " {used}",
+    "rotate": 90,
     "align": 0.5,
   },
 
@@ -95,6 +72,7 @@
     "interval": 5,
     "tooltip": false,
     "format": " {usage}",
+    "rotate": 90,
     "align": 0.5,
     "states": {
       "ok": 80,
@@ -103,11 +81,12 @@
   },
 
   "clock": {
-    "interval": 1,
+    "interval": 60,
     "tooltip": true,
     "tooltip-format": "{:%Y-%m-%d}",
-    "format": "{:%I:%M %p  }",
-    "format-alt": "{:%I:%M %p | %a, %b %d  }",
+    "on-click": "notify-send \"$(date +\"%a, %b %d  |  %I:%M\" )\" -t 4000 ",
+    "format": "{:%I\n%M}",
+    "rotate": 0,
     "align": 0.5,
   },
 
